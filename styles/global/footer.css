@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  footer .sub-menu {
+    @apply relative inline-block text-white;
+  }
+
+  footer .sub-menu::after {
+    /* Tailwind doesn't support @apply for pseudo-elements — use raw CSS */
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 0.5px;
+    background-color: white;
+    content: "";
+    opacity: 0;
+  }
+
+  footer .sub-menu:hover::after {
+    /* Use raw CSS here as well */
+    opacity: 0.95;
+  }
+
+  footer .link-list {
+    @apply text-center md:text-left;
+  }
+
+  footer .socialmedia {
+    @apply px-4;
+  }
+
+  footer .socialmedia:first-child {
+    @apply pl-0;
+  }
+
+  .contact-box {
+    @apply text-center sm:text-left;
+  }
+
+  .contact-box p {
+    @apply mb-2 text-[14px];
+  }
+
+  footer h4 {
+    @apply text-[16px] font-semibold;
+  }
+
+  footer p {
+    @apply text-[14px] font-normal;
+  }
+}

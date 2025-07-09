@@ -1,0 +1,13 @@
+@tailwind components;
+
+@layer components {
+  .header-bg {
+    background-color: var(--royalblue);
+  }
+  .header-menu-font-size {
+    font-size: 14px;
+  }
+  header .sub-menu {
+    @apply text-white;
+  }
+}
